@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { DxcDialog } from "@dxc-technology/halstack-react";
 import DialogPropsType from "@dxc-technology/halstack-react/dialog/types";
 
@@ -12,29 +12,25 @@ export interface MergeDialogPropsType extends DialogPropsType {
 
 /**
  * @uxpindocurl https://developer.dxc.com/halstack/9/components/dialog/
-* @uxpinuseportal
+ * @uxpinuseportal
  */
 export default function Dialog(props: MergeDialogPropsType) {
   // const [open, setOpen] = React.useState(props.open);
-
 
   //  React.useEffect(() => {
   //     alert("wirthout prop")
   //   }, []);
 
-
   React.useEffect(() => {
-    // setOpen(props.open)   
+    // setOpen(props.open)
 
     if (document.getElementById("dialogContainer")) {
       // alert("container found")
-      const container = document.getElementById('dialogContainer');
+      const container = document.getElementById("dialogContainer");
       let dialog = document.querySelector('[role="dialog"]')?.parentElement;
-      container!.appendChild(dialog!)
+      container!.appendChild(dialog!);
     }
   }, [props.open]);
-
-
 
   // React.useLayoutEffect(() => {
 
@@ -47,17 +43,16 @@ export default function Dialog(props: MergeDialogPropsType) {
 
   // }, [props]);
 
-
   return (
     props.open && (
-
-      <div id="dialogContainer" style={{ minWidth: "768px", minHeight: "600px" }}> {/* DIALOG WILL MOUNT IN THIS DIV */}
-
+      <div
+        id="dialogContainer"
+        style={{ minWidth: "768px", minHeight: "600px" }}
+      >
+        {" "}
+        {/* DIALOG WILL MOUNT IN THIS DIV */}
         <DxcDialog {...props}>{props.children}</DxcDialog>
-
       </div>
-
-
     )
-  )
+  );
 }
