@@ -1,5 +1,10 @@
-import * as React from "react";
 import DateInput from "../DateInput";
-import Inset from "../../Inset/Inset";
 
-export default <DateInput label="Start date" uxpId="date-input" />;
+export default (
+  <DateInput
+    uxpId="date"
+    label="Default label"
+    size="fillParent"
+    helperText="helper text"
+  />
+);

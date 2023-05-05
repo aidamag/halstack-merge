@@ -1,106 +1,49 @@
 import ApplicationLayout from "../ApplicationLayout";
+import Main from "../../Main/Main";
 import Sidenav from "../../Sidenav/Sidenav";
-import SidenavTitle from "../../SidenavTitle/SidenavTitle";
-import SidenavGroup from "../../SidenavGroup/SidenavGroup";
-import SidenavSection from "../../SidenavSection/SidenavSection";
 import SidenavLink from "../../SidenavLink/SidenavLink";
+import SidenavGroup from "../../SidenavGroup/SidenavGroup";
 import Header from "../../Header/Header";
-import Button from "../../Button/Button";
+import  HeaderDropdown from "../../HeaderDropdown/HeaderDropdown";
+
+const options = [
+  {
+    value: 1,
+    label: "Android"
+  },
+  {
+    value: 2,
+    label: "Windows"
+  },
+  {
+    value: 3,
+    label: "IOS"
+  }
+];
 
 export default (
-  <ApplicationLayout
-    uxpId="application-layout"
-    header={
-      <Header
-        uxpId="header"
-        underlined
-        content={<Button uxpId="header-button" label="Header Button" />}
-        responsiveContent={(closeHandler) => {
-          return (
-            <Button
-              uxpId="header-responsive-button"
-              label={"Custom Button"}
-              onClick={closeHandler}
-            />
-          );
-        }}
-      />
-    }
-    sidenav={
-      <Sidenav
-        uxpId="sidenav"
-        title={<SidenavTitle uxpId="sidenav-title">Sidenav Title</SidenavTitle>}
-      >
-        <SidenavSection uxpId="sidenav-section-1">
-          <SidenavGroup uxpId="sidenav-group-1" title="Group title" collapsable>
-            <SidenavLink uxpId="sidenav-link-1" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-2" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-3" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-4" href="#">
-              Lorem ipsum
-            </SidenavLink>
-          </SidenavGroup>
-          <SidenavGroup uxpId="sidenav-group-2" title="Group title">
-            <SidenavLink uxpId="sidenav-link-5" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-6" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-7" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-8" href="#">
-              Lorem ipsum
-            </SidenavLink>
-          </SidenavGroup>
-        </SidenavSection>
-
-        <SidenavSection uxpId="sidenav-section-2">
-          <SidenavLink uxpId="sidenav-link-9" href="#">
-            Lorem ipsum
-          </SidenavLink>
-          <SidenavLink uxpId="sidenav-link-10" href="#">
-            Lorem ipsum
-          </SidenavLink>
-          <SidenavGroup uxpId="sidenav-group-3" title="Group title" collapsable>
-            <SidenavLink uxpId="sidenav-link-11" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-12" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-13" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-14" href="#">
-              Lorem ipsum
-            </SidenavLink>
-          </SidenavGroup>
-          <SidenavGroup uxpId="sidenav-group-4" title="Group title" collapsable>
-            <SidenavLink uxpId="sidenav-link-15" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-16" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-17" href="#">
-              Lorem ipsum
-            </SidenavLink>
-            <SidenavLink uxpId="sidenav-link-18" href="#">
-              Lorem ipsum
-            </SidenavLink>
-          </SidenavGroup>
-        </SidenavSection>
-      </Sidenav>
-    }
-  >
-    asd asd asd asd asd asd asd
+  <ApplicationLayout uxpId="application-layout">
+    <Header uxpId="header" slotName="header" underlined>
+    <HeaderDropdown uxpId="header-dropdown" label="Select OS" options={options}/>
+    </Header>
+    <Sidenav uxpId="sidenav" slotName="sidenav">
+      <SidenavGroup uxpId="sidenav-group-1" title="Group title" collapsable>
+        <SidenavLink uxpId="sidenav-link-1" href="#">
+          Lorem ipsum
+        </SidenavLink>
+        <SidenavLink uxpId="sidenav-link-2" href="#">
+          Lorem ipsum
+        </SidenavLink>
+        <SidenavLink uxpId="sidenav-link-3" href="#">
+          Lorem ipsum
+        </SidenavLink>
+        <SidenavLink uxpId="sidenav-link-4" href="#">
+          Lorem ipsum
+        </SidenavLink>
+      </SidenavGroup>
+    </Sidenav>
+    <Main uxpId="main" slotName="main">
+      Main
+    </Main>
   </ApplicationLayout>
 );

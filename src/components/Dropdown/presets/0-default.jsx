@@ -1,6 +1,4 @@
-import * as React from "react";
 import Dropdown from "../Dropdown";
-import Inset from "../../Inset/Inset";
 
 const options = [
   {
@@ -18,9 +16,5 @@ const options = [
 ];
 
 export default (
-  <Dropdown
-    uxpId="dropdown"
-    label="Select platform"
-    options={options}
-  ></Dropdown>
+  <Dropdown uxpId="dropdown" label="Select OS" options={options} />
 );

@@ -1,7 +1,8 @@
-import React from "react";
 import { DxcFlex } from "@dxc-technology/halstack-react/";
-import FlexPropsType from "@dxc-technology/halstack-react/flex/types";
+import Props from "@dxc-technology/halstack-react/flex/types";
 
-export default function Flex(props: FlexPropsType) {
+const Flex = (props: Props) => {
   return <DxcFlex {...props}>{props.children}</DxcFlex>;
-}
+};
+
+export default Flex;

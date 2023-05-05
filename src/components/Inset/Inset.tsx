@@ -10,11 +10,7 @@ import InsetPropsType from "@dxc-technology/halstack-react/inset/types";
  * SkipContainerWrapper, NonResizableWrapper
  */
 export default function Inset(props: InsetPropsType) {
-  return (
-    <div>
-      <DxcInset {...props} />
-    </div>
-  );
+  return <DxcInset {...props} />;
 }
 
 // const Inset = (props) => {

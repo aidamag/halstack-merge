@@ -1,10 +1,10 @@
-import React from "react";
-import { DxcAccordion } from "@dxc-technology/halstack-react";
-import AccordionPropsType from "@dxc-technology/halstack-react/accordion/types";
+import { DxcApplicationLayout } from "@dxc-technology/halstack-react";
+import FooterPropsType from "@dxc-technology/halstack-react/footer/types";
 
-/**
- * @uxpindocurl https://developer.dxc.com/halstack/9/components/accordion/
- */
-export default function Footer(props: AccordionPropsType) {
-  return <DxcAccordion {...props} />;
+export default function Footer(props: FooterPropsType) {
+  return (
+    <div>
+      <DxcApplicationLayout.Footer {...props} />
+    </div>
+  );
 }

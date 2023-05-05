@@ -1,24 +1,10 @@
-import React from "react";
 import { DxcNavTabs } from "@dxc-technology/halstack-react";
+import { NavTabsProps } from "@dxc-technology/halstack-react/nav-tabs/types";
 
 /**
- * @uxpindocurl https://developer.dxc.com/halstack/9/components/accordion/
+ * @uxpindocurl https://developer.dxc.com/halstack/9/components/nav-tabs/
  */
-export default function NavTabs(props: NavTabsPropsTypes) {
+
+export default function NavTabs(props: NavTabsProps) {
   return <DxcNavTabs {...props} />;
 }
-
-type NavTabsPropsTypes = {
-  /**
-   * Whether the icon should appear above or to the left of the label.
-   */
-  iconPosition?: "top" | "left";
-  /**
-   * Value of the tabindex for each tab.
-   */
-  tabIndex?: number;
-  /**
-   * Content of the tabs nav.
-   */
-  children: React.ReactNode;
-};

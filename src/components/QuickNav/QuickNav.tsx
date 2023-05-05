@@ -1,10 +1,10 @@
-import React from "react";
 import { DxcQuickNav } from "@dxc-technology/halstack-react";
-import QuickNavPropsType from "@dxc-technology/halstack-react/quick-nav/types";
+import Props from "@dxc-technology/halstack-react/quick-nav/types";
 
 /**
- * @uxpindocurl https://developer.dxc.com/halstack/9/components/accordion/
+ * @uxpindocurl https://developer.dxc.com/halstack/9/components/quick-nav/
  */
-export default function QuickNav(props: QuickNavPropsType) {
+
+export default function QuickNav(props: Props) {
   return <DxcQuickNav {...props} />;
 }
